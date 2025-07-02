@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jyothi Devappa - Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --beige: #f9f4ef;
+      --text: #2d2d2d;
+      --accent: #c1a57b;
+      --active-link: #a88765;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--beige);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    .custom-navbar {
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .navbar-brand img {
+      width: 50px;
+      height: auto;
+    }
+
+    .nav-link {
+      position: relative;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 12px;
+      color: var(--text);
+      padding: 8px 0;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--active-link);
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+      margin-top: 5px;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* SEARCH */
+    .search-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #aaa;
+      font-size: 1.1rem;
+    }
+
+    .search-input-box {
+      width: 180px;
+      border: 1px solid #ccc;
+      padding: 5px 12px 5px 36px;
+      border-radius: 50px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .search-input-box:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 0.1rem rgba(193, 165, 123, 0.2);
+    }
+
+    @media (max-width: 991px) {
+      .navbar-brand.text-logo {
+        display: none;
+      }
+      .navbar-brand.logo-image {
+        display: block;
+      }
+
+      .search-input-box {
+        display: none;
+      }
+
+      .search-icon {
+        position: static;
+        transform: none;
+        font-size: 1.4rem;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      .search-container {
+        order: 0;
+        margin-left: auto;
+        margin-right: 10px;
+      }
+
+      .navbar-toggler {
+        order: 1;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .navbar-brand.text-logo {
+        display: block;
+      }
+      .navbar-brand.logo-image {
+        display: none;
+      }
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #5a5a5a;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container d-flex align-items-center justify-content-between flex-wrap">
+
+      <!-- Logo -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand text-logo" href="#">JyothiDevappa</a>
+        <a class="navbar-brand logo-image" href="#">
+          <img src="jd-logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <!-- Search -->
+      <div class="search-container">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" class="form-control search-input-box" />
+      </div>
+
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I’m <strong>Jyothi Devappa</strong>, Full Stack Developer building clean web experiences.</p>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
