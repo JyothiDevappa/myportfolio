@@ -237,15 +237,28 @@ body {
 /*** Mobile Adjustments ***/
 @media (max-width: 768px) {
   .hero-coder {
-    background-position: left center;
-    background-size: 170% auto; /* Hide ~30% from right */
+    min-height: 85vh;
+    padding-top: 40px;
+    background-size: 300%; /* Zoom in more */
+    background-position: 35% center; /* Shift slightly right to show laptop edge */
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .welcome-text {
+    font-size: 2rem;
   }
 
   .type-effect {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
-  .subtitle {
-    font-size: 1rem;
+  .btn-about {
+    font-size: 0.9rem;
+    padding: 8px 18px;
   }
 }
