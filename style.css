@@ -1,0 +1,251 @@
+:root {
+  --beige: #f9f4ef;
+  --text: #2d2d2d;
+  --accent: #c1a57b;
+  --active-link: #a88765;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--beige);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.custom-navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: auto;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 12px;
+  color: var(--text);
+  padding: 8px 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--active-link);
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  margin-top: 5px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* SEARCH CENTER DESKTOP ONLY */
+.search-desktop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.search-input-box {
+  max-width: 400px;
+  width: 100%;
+  padding: 5px 5px 5px 45px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.search-input-box:focus {
+  border-color: var(--accent);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 200px);
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+}
+
+/* MOBILE RIGHT SIDE TOOLS */
+.mobile-tools {
+  display: none;
+}
+
+.mobile-search-icon {
+  font-size: 1.4rem;
+  color: #555;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+/* Close inside mobile nav */
+.close-menu {
+  display: none;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px 20px 0 0;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .navbar-brand.text-logo {
+    display: none;
+  }
+
+  .navbar-brand.logo-image {
+    display: block;
+  }
+
+  .search-desktop {
+    display: none;
+  }
+
+  .mobile-tools {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .close-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand.logo-image {
+    display: none;
+  }
+}
+
+/***      first section  **/ 
+
+/*** Hero Section ***/
+.hero-coder {
+  min-height: 100vh;
+  background: url('image1.jpg') center center/cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  padding: 100px 20px 60px;
+  color: var(--text);
+  display: flex;
+    align-items: flex-start; /* <--- move content upwards */
+  padding-top: 8px; 
+  align-items: center;
+}
+
+.hero-coder .container {
+  padding-top: 40px;
+}
+
+.type-effect {
+  font-size: 2.7rem;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--accent);
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 21ch; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--accent); }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--active-link);
+  transform: translateY(-2px);
+}
+
+.btn-about {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 10px 24px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-about:hover {
+  background-color: var(--accent);
+  color: white;
+  transform: scale(1.05);
+}
+
+/*** Mobile Adjustments ***/
+@media (max-width: 768px) {
+  .hero-coder {
+    background-position: left center;
+    background-size: 170% auto; /* Hide ~30% from right */
+  }
+
+  .type-effect {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

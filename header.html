@@ -1,0 +1,42 @@
+<!-- header.html -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap">
+
+    <!-- LOGO -->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand text-logo" href="#">JyothiDevappa</a>
+      <a class="navbar-brand logo-image" href="#">
+        <img src="images/jd-logo.png" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- CENTER SEARCH (DESKTOP ONLY) -->
+    <div class="search-desktop position-relative d-none d-lg-flex mx-auto">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" id="searchInput" class="form-control search-input-box" placeholder="Search here..." />
+    </div>
+
+    <!-- MOBILE RIGHT ICONS -->
+    <div class="mobile-tools d-lg-none d-flex align-items-center">
+      <i class="bi bi-search mobile-search-icon me-3"></i>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- NAV LINKS -->
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <div class="close-menu d-lg-none" onclick="document.querySelector('#navbarNav').classList.remove('show')">&times;</div>
+
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
