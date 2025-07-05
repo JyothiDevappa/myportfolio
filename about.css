@@ -1,78 +1,142 @@
-:root {
-      --beige: #c1a57b;
-      --bg: #f9f4ef;
-      --text: #2d2d2d;
-    }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
+body{
 
-    h2.section-title {
-      font-size: 2.2rem;
-      font-weight: 600;
-      position: relative;
-      margin-bottom: 40px;
-      display: inline-block;
-    }
+}
+.section-title{
+  text-align: center;
+  color: burlywood;
+}
 
-    h2.section-title::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background-color: var(--beige);
-      margin: 8px auto 0;
-    }
+.section-bg {
+  background-color: #fef7e5;
+}
+.section-bg-blue {
+  background-color: #e3f6fc;
+}
 
-    .about-text ul {
-      list-style: none;
-      padding: 0;
-    }
 
-    .about-text ul li {
-      margin-bottom: 10px;
-    }
+.content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+.profile-section {
+  background-image: url('image1.jpg'); /* your image file name */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f4f4f4; /* makes text readable if background is dark */
+  position: relative;
+}
+.profile-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* soft dark overlay */
+  z-index: 0;
+}
 
-    .skills .progress {
-      height: 10px;
-      background-color: #eee;
-      border-radius: 20px;
-      
-    }
+.profile-section .container {
+  position: relative;
+  z-index: 1;
+}
 
-    .skills .progress-bar {
-      border-radius: 20px;
-      background-color: var(--beige);
-    }
+.social-icons a {
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
+}
 
-    .skills-label {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
+.social-icons a:hover {
+  color: #007bff;
+}
 
-    .section {
-      padding: 60px 0;
-    }
 
-    .about-text h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
 
-    .about-img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
+.info-list {
+  padding: 0;
+  list-style: none;
+    margin-top: 1.5rem; /* 👈 Pushes it down */
 
-    @media (min-width: 768px) {
-      .skills .col-md-6 {
-        padding: 0 40px;
-      }
-    
-    }
+  
+}
+
+.info-list li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 3;
+}
+
+.info-list i {
+  color: #4db6ac;
+  margin-right: 6px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem; /* space below the "Skills" heading */
+  color: #222;
+}
+
+.skill-name {
+  font-weight: 600;
+  margin-bottom: 8px; /* space between skill name and progress bar */
+  margin-top: 20px;    /* space above each skill name */
+}
+
+.progress {
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color: #4db6ac;
+  height: 100%;
+  border-radius: 5px;
+}
+.progress-bar {
+  background-color: #4db6ac;
+  height: 100%;
+  border-radius: 5px;
+  width: 0; /* Start from 0% */
+  transition: width 2.5s ease-in-out; /* Smooth animation */
+}
+
+.btn-primary {
+  background-color: #4db6ac;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #3ca49b;
+}
+
+.about-role {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #222222;
+  font-family: 'Georgia', serif;
+  margin-bottom: 0.5rem;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  color: #292929;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+/* Optional spacing if needed */
+.col-lg-8 {
+  margin-top: 2rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #dc3545; /* same red as button */
+}
+
+textarea.form-control {
+  resize: none;
+}
