@@ -145,7 +145,11 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
-
+h2{
+  text-align: center;
+  font-weight: bold;
+  font-size: 45px;
+}
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -154,7 +158,9 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
-  gap: 40px;
+  gap: 50px;
+  padding-top: 50px;
+
 }
 
 .about-img img {
@@ -176,7 +182,7 @@ body {
 }
 
 .about-text p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -200,26 +206,58 @@ body {
 .projects-section {
   padding: 80px 20px;
   background-color: #fff;
+
 }
 
 .projects-section h2 {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-weight: bold;
   color: var(--text);
 }
 
 .project-card {
-  background-color: #f9f4ef;
+  /* background-color: #f9f4ef; */
+  background-image: url(image1.jpg);
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
   border-radius: 12px;
   transition: 0.3s;
+  margin-top: 20px;
+  max-width: 520px;
+    min-height: 300px; /* ✅ Add this line to increase height */
 }
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  height: 100%;
+  text-align: center;
+  color: rgb(0, 0, 0); /* optional: white text on image */
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.4); optional: dark overlay for readability */
+  border-radius: 12px;
+}
+
 
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* CONTACT SECTION */
+.btn-brown {
+  background-color: #c1a57b; /* SaddleBrown or choose any brown shade */
+  color: white;
+  border: none;
+}
+
+.btn-brown:hover {
+  background-color: #A0522D; /* slightly lighter brown */
+  color: white;
+}
+
+
 /* CONTACT SECTION */
 .contact-section {
   background-color: #e8dccf; /* dark beige */
@@ -339,3 +377,6 @@ body {
   background-color: #d8c6ac;
   transform: translateY(-4px);
 }
+
+
+
