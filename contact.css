@@ -14,13 +14,7 @@ body {
 }
 
 .contact-hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 80px 0;
-  background: url('image.jpg') no-repeat right center;
-  background-size: cover;
-  background-attachment: fixed;
+ background-color: #f9f4ef;
 }
 
 .contact-box {

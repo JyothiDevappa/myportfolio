@@ -1,63 +1,38 @@
-
-body{
-
-}
-.section-title{
+.section-title {
   text-align: center;
-  color: burlywood;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #222;
 }
-
-.section-bg {
-  background-color: #fef7e5;
-}
-.section-bg-blue {
-  background-color: #e3f6fc;
-}
-
 
 .content h3 {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
 }
+
 .profile-section {
-  background-image: url('image1.jpg'); /* your image file name */
+  background-image: url('image1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #f4f4f4; /* makes text readable if background is dark */
+  color: #0e0d0d;
   position: relative;
 }
+
 .profile-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.2); /* soft dark overlay */
+  background-color: rgba(0, 0, 0, 0.1);
   z-index: 0;
 }
-
-.profile-section .container {
-  position: relative;
-  z-index: 1;
-}
-
-.social-icons a {
-  font-size: 1.4rem;
-  transition: color 0.2s ease;
-}
-
-.social-icons a:hover {
-  color: #007bff;
-}
-
-
 
 .info-list {
   padding: 0;
   list-style: none;
-    margin-top: 1.5rem; /* 👈 Pushes it down */
-
-  
+  margin-top: 1.5rem;
 }
 
 .info-list li {
@@ -66,22 +41,17 @@ body{
   line-height: 3;
 }
 
-.info-list i {
-  color: #4db6ac;
-  margin-right: 6px;
-}
-
 .section-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 2rem; /* space below the "Skills" heading */
+  margin-bottom: 2rem;
   color: #222;
 }
 
 .skill-name {
   font-weight: 600;
-  margin-bottom: 8px; /* space between skill name and progress bar */
-  margin-top: 20px;    /* space above each skill name */
+  margin-bottom: 8px;
+  margin-top: 20px;
 }
 
 .progress {
@@ -94,19 +64,15 @@ body{
   background-color: #4db6ac;
   height: 100%;
   border-radius: 5px;
-}
-.progress-bar {
-  background-color: #4db6ac;
-  height: 100%;
-  border-radius: 5px;
-  width: 0; /* Start from 0% */
-  transition: width 2.5s ease-in-out; /* Smooth animation */
+  width: 0;
+  transition: width 2.5s ease-in-out;
 }
 
 .btn-primary {
   background-color: #4db6ac;
   border: none;
 }
+
 .btn-primary:hover {
   background-color: #3ca49b;
 }
@@ -127,16 +93,38 @@ body{
   max-width: 800px;
 }
 
-/* Optional spacing if needed */
 .col-lg-8 {
   margin-top: 2rem;
 }
 
 .form-control:focus {
   box-shadow: none;
-  border-color: #dc3545; /* same red as button */
+  border-color: #e0c69e;
 }
 
 textarea.form-control {
   resize: none;
+}
+
+.contact-form-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-form-section .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  z-index: 0;
+}
+
+.contact-box {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
 }
