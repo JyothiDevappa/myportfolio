@@ -1,0 +1,97 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  margin: 0;
+  background-image: url(pink.jpg);
+    /* background-image: url(1076df6744238e75e79047f7c2d2bbec.jpg); */
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projects-section {
+  padding: 80px 20px;
+  background-color: var(--primary-bg);
+}
+
+.projects-section h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--title-color);
+  margin-bottom: 30px;
+}
+
+.projects-section p.lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--desc-color);
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.project-card {
+  /* background-color: #f9f4ef; */
+  background-image: url(1076df6744238e75e79047f7c2d2bbec.jpg);
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+  margin-top: 20px;
+  max-width: 520px;
+    min-height: 300px; /* ✅ Add this line to increase height */
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #352c2c;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--desc-color);
+  line-height: 1.7;
+  margin-bottom: 19px;
+}
+
+.btn-brown {
+  background-color: #d8c8b3;
+  color: rgb(97, 59, 16);
+  border: none;
+  padding: 6px 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-brown:hover {
+  background-color: #a7885f;
+}
+.btn-dark {
+  background-color: #aa815a !important; /* Replace with your custom dark color */
+  color: #fff !important;
+  border: none;
+  font-weight: 500;
+  padding: 6px 14px;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+.btn-dark:hover {
+  background-color: #3c342d !important; /* Slightly darker on hover */
+}
