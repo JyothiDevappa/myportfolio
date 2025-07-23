@@ -1,9 +1,9 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fefefe;
+  background-color: #f2feff;
   margin: 0;
-  background-image: url(pink.jpg);
+  /* background-image: url(pink.jpg); */
     /* background-image: url(1076df6744238e75e79047f7c2d2bbec.jpg); */
 
   background-repeat: no-repeat;
@@ -13,85 +13,106 @@ body {
 .projects-section {
   padding: 80px 20px;
   background-color: var(--primary-bg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .projects-section h2 {
-  font-size: 3.5rem;
   font-weight: bold;
   color: var(--title-color);
   margin-bottom: 30px;
+  color: rgb(34, 161, 149);
 }
 
-.projects-section p.lead {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: var(--desc-color);
-  max-width: 800px;
-  margin: 0 auto 50px;
-}
 
-.project-card {
-  /* background-color: #f9f4ef; */
-  background-image: url(1076df6744238e75e79047f7c2d2bbec.jpg);
-  background-repeat: no-repeat;
-  /* background-position: center; */
-  background-size: cover;
-  border-radius: 12px;
-  transition: 0.3s;
-  margin-top: 20px;
-  max-width: 520px;
-    min-height: 300px; /* ✅ Add this line to increase height */
-}
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-.card-body {
+.zoom-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  height: 390px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.zoom-card:hover {
+  transform: translateY(-5px);
+}
+
+.zoom-card-img {
+  position: relative;
+  height: 60%;
+  overflow: hidden;
+}
+
+.zoom-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.zoom-card:hover .zoom-card-img img {
+  transform: scale(1.1);
+  filter: brightness(1);
+}
+
+.zoom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 183, 255, 0.1);
+  display: flex;
   align-items: center;
-  padding: 25px;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+
+.zoom-card-content {
+  height: 30%;
+  padding: 12px;
+  background-color: #ffffff;
   text-align: center;
 }
 
-.card-title {
-  font-size: 1.7rem;
+.zoom-title {
+  font-size: 16px;
   font-weight: 600;
-  color: #352c2c;
+  margin-bottom: 5px;
+}
+
+.zoom-text {
+  font-size: 13px;
+  color: #555;
   margin-bottom: 10px;
 }
-
-.card-text {
-  font-size: 1rem;
-  color: var(--desc-color);
-  line-height: 1.7;
-  margin-bottom: 19px;
-}
-
-.btn-brown {
-  background-color: #d8c8b3;
-  color: rgb(97, 59, 16);
-  border: none;
+.btn-sky {
+  background-color: #7ed5d8;
+  color: white;
+  font-size: 13px;
   padding: 6px 14px;
-  font-weight: 500;
+  border-radius: 6px;
+  border: none;
   transition: background-color 0.3s ease;
 }
 
-.btn-brown:hover {
-  background-color: #a7885f;
-}
-.btn-dark {
-  background-color: #aa815a !important; /* Replace with your custom dark color */
-  color: #fff !important;
-  border: none;
-  font-weight: 500;
-  padding: 6px 14px;
-  transition: 0.3s;
-  border-radius: 6px;
+.btn-sky:hover {
+  background-color: #62a0b4;
+  color: #ffffff;
 }
 
-.btn-dark:hover {
-  background-color: #3c342d !important; /* Slightly darker on hover */
+
+
+
+
+
+.sky-footer {
+  background-color: #d4e6ee; /* soft sky blue */
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
