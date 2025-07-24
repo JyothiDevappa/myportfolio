@@ -147,8 +147,10 @@ body {
 }
 h2{
   text-align: center;
-  font-weight: bold;
   font-size: 45px;
+   color: rgb(34, 161, 149);
+     font-weight: bold;
+
 }
 .about-container {
   display: flex;
@@ -203,59 +205,6 @@ h2{
 }
 
 /* PROJECTS SECTION */
-.projects-section {
-  padding: 80px 20px;
-  background-color: #fff;
-
-}
-
-.projects-section h2 {
-  font-size: 3.2rem;
-  font-weight: bold;
-  color: var(--text);
-}
-
-.project-card {
-  /* background-color: #f9f4ef; */
-  background-image: url(image1.jpg);
-  background-repeat: no-repeat;
-  /* background-position: center; */
-  background-size: cover;
-  border-radius: 12px;
-  transition: 0.3s;
-  margin-top: 20px;
-  max-width: 520px;
-    min-height: 300px; /* ✅ Add this line to increase height */
-}
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
-  height: 100%;
-  text-align: center;
-  color: rgb(0, 0, 0); /* optional: white text on image */
-  padding: 20px;
-  /* background-color: rgba(0, 0, 0, 0.4); optional: dark overlay for readability */
-  border-radius: 12px;
-}
-
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.btn-brown {
-  background-color: #c1a57b; /* SaddleBrown or choose any brown shade */
-  color: white;
-  border: none;
-}
-
-.btn-brown:hover {
-  background-color: #A0522D; /* slightly lighter brown */
-  color: white;
-}
 
 
 /* CONTACT SECTION */
