@@ -17,7 +17,10 @@
   <!-- Fixed Header/Navbar -->
   <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container">
-<a class="navbar-brand" href="../index.html">JyothiDevappa</a>
+      <a class="navbar-brand" href="../index.html">
+        <span class="d-none d-sm-inline">JyothiDevappa</span>
+        <span class="d-inline d-sm-none">JD</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -42,7 +45,7 @@
 
 
 
-<section id="projects" class="projects-section text-center">
+  <section id="projects" class="projects-section text-center">
     <div class="container">
       <h2 class="mb-4"> MY PROJECTS</h2>
       <p class="mb-5 lead">A collection of my personal and technical works each one crafted with curiosity, code, and
@@ -56,13 +59,15 @@
             <div class="zoom-card-img">
               <img src="../images/image1.jpeg" alt="The Story of Her Days">
               <div class="zoom-overlay">
-                <a href="https://jyothidevappa.github.io/The-Story-of-Her-Days/" class="btn btn-sm custom-btn">See Live🔗</a>
+                <a href="https://jyothidevappa.github.io/The-Story-of-Her-Days/" class="btn btn-sm custom-btn">See
+                  Live🔗</a>
               </div>
             </div>
             <div class="zoom-card-content">
               <h5 class="zoom-title">The Story of Her Days</h5>
               <p class="zoom-text">A personal storytelling site blending aesthetic design and daily reflections.</p>
-              <a href="https://github.com/JyothiDevappa/The-Story-of-Her-Days.git" class="btn btn-sm btn-sky">Source Code</a>
+              <a href="https://github.com/JyothiDevappa/The-Story-of-Her-Days.git" class="btn btn-sm btn-sky">Source
+                Code</a>
             </div>
           </div>
         </div>
@@ -135,7 +140,8 @@
               <h5 class="zoom-title">Login Page UI</h5>
               <p class="zoom-text">A responsive and aesthetic login page built using HTML and CSS. Designed for personal
                 and creative web projects.</p>
-              <a href="https://github.com/JyothiDevappa/login-page.git" target="_blank" class="btn btn-sm btn-sky">Source
+              <a href="https://github.com/JyothiDevappa/login-page.git" target="_blank"
+                class="btn btn-sm btn-sky">Source
                 Code</a>
             </div>
           </div>
@@ -165,7 +171,7 @@
           </div>
         </div>
 
-        
+
         <!-- Project 5: Java Quiz App -->
         <div class="col-md-4 d-flex justify-content-center">
           <div class="zoom-card">
@@ -239,33 +245,33 @@
   <a id="scrollArrow" href="#projects" class="scroll-arrow" title="Scroll">
     <i class="bi bi-arrow-down-short"></i>
   </a>
-<section id="contact" style="height: 1px;"></section>
+  <section id="contact" style="height: 1px;"></section>
 
   <script>
-  const scrollArrow = document.getElementById("scrollArrow");
-const contactSection = document.getElementById("contact");
+    const scrollArrow = document.getElementById("scrollArrow");
+    const contactSection = document.getElementById("contact");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Contact section is visible: show UP arrow
-        scrollArrow.href = "#projects";
-        scrollArrow.innerHTML = '<i class="bi bi-arrow-up-short"></i>';
-      } else {
-        // Not visible: show DOWN arrow
-        scrollArrow.href = "#contact";
-        scrollArrow.innerHTML = '<i class="bi bi-arrow-down-short"></i>';
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Contact section is visible: show UP arrow
+            scrollArrow.href = "#projects";
+            scrollArrow.innerHTML = '<i class="bi bi-arrow-up-short"></i>';
+          } else {
+            // Not visible: show DOWN arrow
+            scrollArrow.href = "#contact";
+            scrollArrow.innerHTML = '<i class="bi bi-arrow-down-short"></i>';
+          }
+        });
+      },
+      {
+        threshold: 0.5,
       }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
+    );
 
-observer.observe(contactSection);
-</script>
+    observer.observe(contactSection);
+  </script>
 
 </body>
 
