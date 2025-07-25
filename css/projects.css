@@ -1,43 +1,19 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f2feff;
   margin: 0;
-
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
-
 .projects-section {
   padding: 80px 20px;
-  background-color: var(--primary-bg);
+  background-color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
-
-
-
 .mb-4 {
-
   color: rgb(34, 161, 149);
-
-  font-size: 60px;
-
-
+font-size: 60px;
 }
-
-
-/* .zoom-card {
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 360px;
-  height: 390px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease;
-} */
-
 .zoom-card {
   background: #ffffff;
   border-radius: 5px;
@@ -51,23 +27,15 @@ body {
   transition: all 0.3s ease;
   margin-bottom: 30px;
 }
-
 .zoom-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
-
-
-/* .zoom-card:hover {
-  transform: translateY(-5px);
-} */
-
 .zoom-card-img {
   position: relative;
   height: 70%;
   overflow: hidden;
 }
-
 .zoom-card-img img {
   width: 100%;
   height: 100%;
@@ -75,12 +43,10 @@ body {
   filter: brightness(0.6);
   transition: transform 0.5s ease, filter 0.5s ease;
 }
-
 .zoom-card:hover .zoom-card-img img {
   transform: scale(1.1);
   filter: brightness(1);
 }
-
 .zoom-overlay {
   position: absolute;
   top: 0;
@@ -106,15 +72,12 @@ body {
   color: #000000;
   border: 1px solid #ffffff;
 }
-
-
 /* .zoom-card-content {
   height: 30%;
   padding: 12px;
   background-color: #ffffff;
   text-align: center;
 } */
-
 .zoom-card-content {
   padding: 20px 16px;
   text-align: center;
@@ -140,31 +103,6 @@ body {
   margin-top: 10px;
   margin-bottom: 4px;
 }
-
-
-/* .zoom-title {
-  font-size: 20px;
-  color: darkcyan;
-  font-weight: 600;
-  margin-bottom: 5px;
-} */
-
-/* .zoom-text {
-  font-size: 15px;
-  color: darkslategrey;
-  margin-bottom: 10px;
-  text-align: justify;
-} */
-
-/* .zoom-text {
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 1.6;
-  margin: 10px 0 16px;
-  font-weight: 400;
-  opacity: 0.85;
-} */
-
 .zoom-text {
   font-size: 13px;
   color: #4e4e4e;
@@ -172,25 +110,6 @@ body {
   margin: 12px 20px 16px;
   opacity: 0.9;
 }
-
-/* 
-.btn-sky {
-  background-color: #7ed5d8;
-  color: rgb(90, 86, 86);
-  font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 6px;
-  border: none;
-  min-width: 200px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-sky:hover {
-  background-color: #62a0b4;
-  color: #ffffff;
-} */
-
-
 .btn-sky {
   background: transparent;
   color: #218c9e;
@@ -202,17 +121,11 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
 }
-
 .btn-sky:hover {
   background-color: #218c9e;
   color: white;
   box-shadow: 0 4px 10px rgba(33, 140, 158, 0.2);
 }
-
-
-
-
-
 .sky-footer {
   background-color: #d4e6ee;
   /* soft sky blue */

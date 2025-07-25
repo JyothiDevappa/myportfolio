@@ -64,7 +64,7 @@ body {
 /* HERO SECTION */
 .hero-coder {
   min-height: 100vh;
-  background: url('image1.jpg') center center/cover no-repeat;
+  background: url('../images/image1.jpg') center center/cover no-repeat;
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -167,7 +167,8 @@ h2{
 
 .about-img img {
   width: 300px;
-  border-radius: 12px;
+  background-color: #2c2b29;
+  border-radius: 160px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -187,7 +188,7 @@ h2{
   font-size: 18px;
   margin-bottom: 10px;
 }
-
+/* 
 .btn-resume {
   padding: 10px 20px;
   border: 2px solid #4b3832;
@@ -202,10 +203,87 @@ h2{
 .btn-resume:hover {
   background-color: #4b3832;
   color: #f5f5dc;
+} */
+
+.btn-resume {
+  padding: 10px 20px;
+  border: 2px solid #4b3832;
+  color: #4b3832;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  display: inline-block;
+  margin-right: 12px; /* 👈 adds gap between buttons */
+  margin-top: 15px;   /* 👈 pushes both buttons down a little */
+}
+
+.btn-resume:hover {
+  background-color: #4b3832;
+  color: #f5f5dc;
+}
+
+/* 📱 Responsive for all mobile screens */
+@media (max-width: 576px) {
+  .about-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .about-img img {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 0 10px;
+
+  }
+@media (max-width: 576px) {
+  h2 {
+    font-size: 35px;
+  }
+}
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+ 
 }
 
 /* PROJECTS SECTION */
 
+.view-projects-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #e0ddd5; /* soft beige */
+  color: #585858; /* muted dark brown-grey text */
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #d6d3cc;
+  font-weight: bold;
+}
+
+.view-projects-btn:hover {
+  background-color: #dad6ce; /* slightly darker beige on hover */
+  color: #2c2b29;
+  transform: translateY(-1px);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 /* CONTACT SECTION */
 .contact-section {
