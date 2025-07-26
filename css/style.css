@@ -1,3 +1,8 @@
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Root & Base */
 :root {
   --beige: #f9f4ef;
@@ -37,7 +42,7 @@ body {
   margin: 0 10px;
   text-transform: uppercase;
   position: relative;
-  transition: 0.3s;
+  transition: 0s;
 }
 
 .nav-link:hover,
@@ -65,7 +70,8 @@ body {
 .hero-coder {
   min-height: 100vh;
   background: url('../images/image1.jpg') center center/cover no-repeat;
-  background-attachment: fixed;
+  /* background: url('../images/image.jpg') center center/cover no-repeat; */
+
   display: flex;
   align-items: center;
   padding: 100px 20px 60px;
@@ -84,13 +90,25 @@ body {
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 21ch; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 21ch;
+  }
 }
 
 @keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: var(--accent); }
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--accent);
+  }
 }
 
 .subtitle {
@@ -111,16 +129,6 @@ body {
   color: var(--active-link);
 }
 
-/* .btn-about {
-  padding: 10px 24px;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-} */
-
 .btn-about {
   display: inline-block;
   padding: 10px 24px;
@@ -130,12 +138,45 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
-  margin-top: 40px; /* Now this will take effect */
+  margin-top: 40px;
+  /* Now this will take effect */
 }
 
 .btn-about:hover {
   background-color: var(--accent);
   color: white;
+}
+
+
+@media (max-width: 768px) {
+  .hero-coder h1 {
+    font-size: 28px;
+    /* margin-top: -40px; */
+
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-coder h1 {
+    font-size: 25px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .social-icons a {
+    font-size: 26px;
+  }
 }
 
 /* ABOUT SECTION */
@@ -145,13 +186,15 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
-h2{
+
+h2 {
   text-align: center;
   font-size: 45px;
-   color: rgb(34, 161, 149);
-     font-weight: bold;
+  color: rgb(34, 161, 149);
+  font-weight: bold;
 
 }
+
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -175,7 +218,15 @@ h2{
 .about-text {
   max-width: 500px;
   color: #4b3832;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+  margin-bottom: 20px;
+  text-align: justify;
 }
+
+/* Responsive Sizes */
+
 
 .about-text h2 {
   font-size: 32px;
@@ -188,22 +239,6 @@ h2{
   font-size: 18px;
   margin-bottom: 10px;
 }
-/* 
-.btn-resume {
-  padding: 10px 20px;
-  border: 2px solid #4b3832;
-  color: #4b3832;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-  display: inline-block;
-}
-
-.btn-resume:hover {
-  background-color: #4b3832;
-  color: #f5f5dc;
-} */
 
 .btn-resume {
   padding: 10px 20px;
@@ -214,8 +249,10 @@ h2{
   border-radius: 6px;
   transition: 0.3s;
   display: inline-block;
-  margin-right: 12px; /* 👈 adds gap between buttons */
-  margin-top: 15px;   /* 👈 pushes both buttons down a little */
+  margin-right: 12px;
+  /* 👈 adds gap between buttons */
+  margin-top: 15px;
+  /* 👈 pushes both buttons down a little */
 }
 
 .btn-resume:hover {
@@ -224,7 +261,7 @@ h2{
 }
 
 /* 📱 Responsive for all mobile screens */
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .about-container {
     flex-direction: column;
     padding: 20px;
@@ -242,11 +279,12 @@ h2{
     padding: 0 10px;
 
   }
-@media (max-width: 576px) {
-  h2 {
-    font-size: 35px;
+
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 35px;
+    }
   }
-}
 
   .about-text h2 {
     font-size: 24px;
@@ -257,16 +295,62 @@ h2{
     text-align: justify;
   }
 
- 
+
+} */
+
+@media (max-width: 480px) {
+
+  h2 {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(34, 161, 149);
+  font-weight: bold;
+
 }
+
+  .about-text p{
+    font-size: 15px;
+    padding: 0 15px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  /* .btn-resume {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 8px 16px;
+    align-items: center;
+  } */
+
+   .about-text {
+    text-align: center;
+  }
+
+  .btn-resume {
+        font-size: 13px;
+
+  padding: 8px 16px;
+ 
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  display: inline-block;
+  }
+}
+
+
+
 
 /* PROJECTS SECTION */
 
 .view-projects-btn {
   display: inline-block;
   padding: 6px 14px;
-  background-color: #e0ddd5; /* soft beige */
-  color: #585858; /* muted dark brown-grey text */
+  background-color: #e0ddd5;
+  /* soft beige */
+  color: #585858;
   font-weight: 500;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 16px;
@@ -279,7 +363,8 @@ h2{
 }
 
 .view-projects-btn:hover {
-  background-color: #dad6ce; /* slightly darker beige on hover */
+  background-color: #dad6ce;
+  /* slightly darker beige on hover */
   color: #2c2b29;
   transform: translateY(-1px);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
@@ -287,7 +372,8 @@ h2{
 
 /* CONTACT SECTION */
 .contact-section {
-  background-color: #e8dccf; /* dark beige */
+  background-color: #e8dccf;
+  /* dark beige */
   padding: 80px 20px;
 }
 
@@ -301,13 +387,6 @@ h2{
   color: #5c4333;
   font-size: 1.1rem;
 }
-
-/* .contact-section .form-control {
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding: 12px 16px;
-  font-size: 1rem;
-} */
 
 .contact-btn {
   background-color: transparent;
@@ -363,7 +442,8 @@ h2{
 
 /*footer section */
 .footer-section {
-  background-color: #f5eee6; /* soft skin-tone dark beige */
+  background-color: #f5eee6;
+  /* soft skin-tone dark beige */
   padding: 40px 0;
   color: #3e2f20;
 }
@@ -385,6 +465,7 @@ h2{
   font-size: 0.95rem;
   margin-top: 10px;
 }
+
 .scroll-arrow {
   position: fixed;
   bottom: 30px;
@@ -407,3 +488,70 @@ h2{
 
 
 
+/* contact.html */
+
+.contact-hero {
+  background-color: #f8f9fa;
+  /* soft light */
+  padding: 80px 20px;
+}
+
+.contact-title {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  color: #207b7e;
+}
+
+.contact-line {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.social-icon {
+  font-size: 18px;
+  color: #207b7e;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icon i {
+  margin-right: 6px;
+}
+
+.social-icon:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* 🌐 Media Queries for Responsive Contact Page */
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 52px;
+    /* 🔼 Bigger on tablets */
+  }
+
+  .contact-line,
+  .social-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 50px;
+    /* 🔼 Even bigger on mobile */
+  }
+
+  .contact-line,
+  .social-icon {
+    font-size: 20px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}

@@ -72,12 +72,7 @@ font-size: 60px;
   color: #000000;
   border: 1px solid #ffffff;
 }
-/* .zoom-card-content {
-  height: 30%;
-  padding: 12px;
-  background-color: #ffffff;
-  text-align: center;
-} */
+
 .zoom-card-content {
   padding: 20px 16px;
   text-align: center;
@@ -131,4 +126,95 @@ font-size: 60px;
   /* soft sky blue */
   padding-top: 40px;
   padding-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .zoom-card {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .mb-4 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .zoom-title {
+    font-size: 16px;
+  }
+
+  .zoom-text {
+    font-size: 12px;
+    margin: 10px;
+  }
+
+  .custom-btn,
+  .btn-sky {
+    font-size: 13px;
+    padding: 5px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 15px;
+  }
+
+  .zoom-card {
+    max-width: 90%;
+  }
+
+  .mb-4 {
+    font-size: 38px;
+  }
+
+  .zoom-title {
+    font-size: 15px;
+  }
+
+  .zoom-text {
+    font-size: 12px;
+  }
+
+  .zoom-card-content::before {
+    width: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .mb-4 {
+    font-size: 30px;
+  }
+
+  .zoom-text {
+    font-size: 11px;
+  }
+
+  .zoom-card-content {
+    padding: 14px 10px;
+  }
+
+  .btn-sky,
+  .custom-btn {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mb-5 {
+    font-size: 1rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .mb-5 {
+    font-size: 0.9rem;
+  }
 }
