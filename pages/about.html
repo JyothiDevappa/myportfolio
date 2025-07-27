@@ -173,57 +173,16 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
   <!-- Dynamic Scroll Arrow -->
   <a id="scrollArrow" href="#about" class="scroll-arrow" title="Scroll">
     <i class="bi bi-arrow-down-short"></i>
   </a>
-
-
-  <!-- Invisible Contact Section for Scroll Observer -->
   <section id="contact" style="height: 1px;"></section>
 
-
-  <script>
-    const scrollArrow = document.getElementById("scrollArrow");
-    const contactSection = document.getElementById("contact");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Contact section is visible: show up arrow
-            scrollArrow.href = "#about";
-            scrollArrow.innerHTML = '<i class="bi bi-arrow-up-short"></i>';
-          } else {
-            // Contact section not in view: show down arrow
-            scrollArrow.href = "#contact";
-            scrollArrow.innerHTML = '<i class="bi bi-arrow-down-short"></i>';
-          }
-        });
-      },
-      {
-        threshold: 0.5, // 50% of contact section in view
-      }
-    );
-
-    observer.observe(contactSection);
-  </script>
-
-  <!-- progress bar  -->
-
-  <script src="script.js"></script>
-  <script>
-    window.addEventListener("load", function () {
-      const bars = document.querySelectorAll(".progress-bar");
-      bars.forEach((bar) => {
-        const width = bar.getAttribute("data-width");
-        bar.style.width = width;
-      });
-    });
-  </script>
-  <!-- Invisible Contact Section Just for Scroll Observer -->
+  <script src="../javascript/about.js"></script>
+  <script src="../javascript/script.js"></script>
+<!-- header -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

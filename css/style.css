@@ -250,54 +250,13 @@ h2 {
   transition: 0.3s;
   display: inline-block;
   margin-right: 12px;
-  /* 👈 adds gap between buttons */
   margin-top: 15px;
-  /* 👈 pushes both buttons down a little */
 }
 
 .btn-resume:hover {
   background-color: #4b3832;
   color: #f5f5dc;
 }
-
-/* 📱 Responsive for all mobile screens */
-/* @media (max-width: 576px) {
-  .about-container {
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
-  }
-
-  .about-img img {
-    width: 200px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .about-text {
-    text-align: center;
-    padding: 0 10px;
-
-  }
-
-  @media (max-width: 576px) {
-    h2 {
-      font-size: 35px;
-    }
-  }
-
-  .about-text h2 {
-    font-size: 24px;
-  }
-
-  .about-text p {
-    font-size: 16px;
-    text-align: justify;
-  }
-
-
-} */
-
 @media (max-width: 480px) {
 
   h2 {
@@ -488,70 +447,3 @@ h2 {
 
 
 
-/* contact.html */
-
-.contact-hero {
-  background-color: #f8f9fa;
-  /* soft light */
-  padding: 80px 20px;
-}
-
-.contact-title {
-  font-size: 48px;
-  font-weight: 700;
-  font-family: 'Georgia', serif;
-  color: #207b7e;
-}
-
-.contact-line {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-.social-icon {
-  font-size: 18px;
-  color: #207b7e;
-  transition: all 0.2s ease-in-out;
-}
-
-.social-icon i {
-  margin-right: 6px;
-}
-
-.social-icon:hover {
-  color: #000;
-  text-decoration: underline;
-}
-
-/* 🌐 Media Queries for Responsive Contact Page */
-
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 52px;
-    /* 🔼 Bigger on tablets */
-  }
-
-  .contact-line,
-  .social-icon {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-title {
-    font-size: 50px;
-    /* 🔼 Even bigger on mobile */
-  }
-
-  .contact-line,
-  .social-icon {
-    font-size: 20px;
-  }
-
-  .social-links {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-}
