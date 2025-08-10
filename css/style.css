@@ -67,15 +67,65 @@ body {
 }
 
 /* HERO SECTION */
-.hero-coder {
+/* .hero-coder {
   min-height: 100vh;
   background: url('../images/image1.jpg') center center/cover no-repeat;
-  /* background: url('../images/image.jpg') center center/cover no-repeat; */
+    background: url('../image.png') center center/cover no-repeat;
+    background: url('../a.png') center center/cover no-repeat;
+
 
   display: flex;
   align-items: center;
   padding: 100px 20px 60px;
   color: var(--text);
+} */
+/* .hero-coder {
+  min-height: 100vh;
+  background: center center/cover no-repeat;
+  transition: background-image 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 100px 20px 60px;
+  color: var(--text);
+} */
+
+/* .hero-coder {
+  min-height: 100vh;
+  background: center center/cover no-repeat;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 100px 20px 60px;
+  color: var(--text);
+} */
+
+.hero-coder {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 20px 60px;
+  color: var(--text);
+  overflow: hidden; /* so background stays inside */
+}
+
+.hero-coder .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* transition: opacity 4s ease-in-out; */
+    transition: opacity 2s ease-in-out; /* fade speed (2s in + 2s out) */
+
+  z-index: 0; /* behind the text */
+}
+
+.hero-coder .container {
+  position: relative;
+  z-index: 1; /* text stays above background */
 }
 
 .type-effect {
@@ -299,35 +349,6 @@ h2 {
   }
 }
 
-
-
-
-/* PROJECTS SECTION */
-
-.view-projects-btn {
-  display: inline-block;
-  padding: 6px 14px;
-  background-color: #e0ddd5;
-  /* soft beige */
-  color: #585858;
-  font-weight: 500;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: 1px solid #d6d3cc;
-  font-weight: bold;
-}
-
-.view-projects-btn:hover {
-  background-color: #dad6ce;
-  /* slightly darker beige on hover */
-  color: #2c2b29;
-  transform: translateY(-1px);
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* CONTACT SECTION */
 .contact-section {
