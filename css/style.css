@@ -66,38 +66,6 @@ body {
   width: 100%;
 }
 
-/* HERO SECTION */
-/* .hero-coder {
-  min-height: 100vh;
-  background: url('../images/image1.jpg') center center/cover no-repeat;
-    background: url('../image.png') center center/cover no-repeat;
-    background: url('../a.png') center center/cover no-repeat;
-
-
-  display: flex;
-  align-items: center;
-  padding: 100px 20px 60px;
-  color: var(--text);
-} */
-/* .hero-coder {
-  min-height: 100vh;
-  background: center center/cover no-repeat;
-  transition: background-image 2s ease-in-out;
-  display: flex;
-  align-items: center;
-  padding: 100px 20px 60px;
-  color: var(--text);
-} */
-
-/* .hero-coder {
-  min-height: 100vh;
-  background: center center/cover no-repeat;
-  transition: opacity 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  padding: 100px 20px 60px;
-  color: var(--text);
-} */
 
 .hero-coder {
   position: relative;
@@ -216,7 +184,7 @@ body {
 
 @media (max-width: 480px) {
   .hero-coder h1 {
-    font-size: 25px;
+    font-size: 24px;
     line-height: 1.1;
   }
 
@@ -228,6 +196,24 @@ body {
     font-size: 26px;
   }
 }
+@media (max-width: 768px) {
+  .hero-coder .bg.adjust-right {
+    background-position: 42% center; /* push more right */
+        top: 40px;              /* pushes the coffee image downward */
+
+    background-size: contain;        /* keep whole image visible */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 400px) {
+  .hero-coder .bg.adjust-right {
+    top: 60px; /* push a bit more down for extra-small screens */
+    background-position: 38% center; /* center it better */
+    background-size: cover;
+  }
+}
+
 
 /* ABOUT SECTION */
 .about-section {
@@ -324,13 +310,7 @@ h2 {
     text-align: justify;
   }
 
-  /* .btn-resume {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 13px;
-    padding: 8px 16px;
-    align-items: center;
-  } */
+
 
    .about-text {
     text-align: center;
@@ -347,6 +327,54 @@ h2 {
   transition: 0.3s;
   display: inline-block;
   }
+}
+
+/* project section button */
+.projects-btn-wrapper {
+  text-align: center;
+  margin: 2rem 0; /* spacing above/below */
+}
+.view-projects-btn {
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #c4a762;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-projects-btn .arrow {
+  font-size: 2rem;
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+/* Hover Effects */
+.view-projects-btn:hover {
+  /* background: #c4a762; */
+  /* color: #fff; */
+  transform: translateY(-2px); /* slight lift */
+  box-shadow: 0 8px 20px rgba(196, 167, 98, 0.25);
+}
+
+.view-projects-btn:hover .arrow {
+  transform: translateX(6px); /* arrow slides forward */
+}
+
+/* Optional: subtle arrow breathing animation */
+@keyframes arrow-pulse {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+.view-projects-btn .arrow {
+  animation: arrow-pulse 1.4s infinite;
 }
 
 

@@ -36,9 +36,17 @@ function changeBackground() {
 
   setTimeout(() => {
     bgElement.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+    // Check if it's the 2nd image (coffee one)
+    if (images[currentIndex].includes("image.png")) {
+      bgElement.classList.add("adjust-right");  // apply mobile tweak
+    } else {
+      bgElement.classList.remove("adjust-right");
+    }
+
     currentIndex = (currentIndex + 1) % images.length;
     bgElement.style.opacity = 1; // fade in
-  }, 2000); // fade-out duration
+  }, 2000);
 }
 
 // First image
